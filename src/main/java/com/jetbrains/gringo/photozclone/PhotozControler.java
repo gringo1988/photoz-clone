@@ -36,7 +36,7 @@ public class PhotozControler {
         Photo photo = db.remove(id);
         if (photo == null) throw new ResponseStatusException(HttpStatus.NOT_FOUND);
     }
-    //Sample
+
     @PostMapping("/photoz/")
     public Photo create(@RequestBody @Valid Photo photo) {
         photo.setId(UUID.randomUUID().toString());
@@ -44,3 +44,4 @@ public class PhotozControler {
         return photo;
     }
 }
+//Sample
